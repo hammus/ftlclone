@@ -1,0 +1,44 @@
+{
+  "name": "ftlclone",
+  "productName": "FTLClone",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "repository": "hammus/ftlclone.git",
+  "author": {
+    "name": "Liam Whan",
+    "url": "https://github.com/hammus"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "node_modules/.bin/tsc -p game && electron .",
+    "build": "node_modules/.bin/tsc -p game && electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "dependencies": {
+    "electron-debug": "1.0.0",
+    "excalibur": "^0.18.0"
+  },
+  "devDependencies": {
+    "devtron": "1.4.0",
+    "electron": "^2.0.6",
+    "electron-packager": "^12.1.0",
+    "typescript": "2.3.2",
+    "xo": "^0.21.1"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
